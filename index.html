@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mohamed & Rawan Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- فقاعات خلفية -->
+  <div class="bubble b1"></div>
+  <div class="bubble b2"></div>
+  <div class="bubble b3"></div>
+
+  <header class="site-header">
+    <div class="logo">M &amp; R</div>
+
+    <nav class="nav-links">
+      <a href="#hero" data-key="navHero">Invitation</a>
+      <a href="#details" data-key="navDetails">Details</a>
+      <a href="#story" data-key="navStory">Our Story</a>
+      <a href="#countdown" data-key="navCountdown">Countdown</a>
+      <a href="#rsvp" data-key="navRSVP">RSVP</a>
+    </nav>
+
+    <div class="top-controls">
+      <span class="lang-label">Language</span>
+      <div id="langToggle" class="lang-toggle">
+        <div class="thumb"></div>
+        <span class="en-label">EN</span>
+        <span class="ar-label">AR</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- سكشن 1: صورة الدعوة -->
+  <section id="hero" class="section hero">
+    <div class="hero-inner fade-in">
+      <div class="hero-text">
+        <p class="eyebrow" data-key="heroEyebrow">Save the Date</p>
+        <h1 class="hero-title" data-key="heroTitle">Mohamed &amp; Rawan</h1>
+        <p class="hero-sub" data-key="heroSub">25 December 2025 · 7 PM · Home R</p>
+      </div>
+      <div class="hero-card">
+        <img src="invite.jpg" alt="Invitation" class="hero-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- سكشن 2: التفاصيل -->
+  <section id="details" class="section details">
+    <div class="section-header fade-up">
+      <h2 data-key="detailsTitle">Event Details</h2>
+      <p data-key="detailsIntro">We would be honored to have you with us on this special evening.</p>
+    </div>
+
+    <div class="details-grid">
+      <div class="detail-box fade-up" data-delay="0">
+        <h3 data-key="detailsWhenLabel">When</h3>
+        <p data-key="detailsWhenValue">Thursday · 25 December 2025 · 7 PM</p>
+      </div>
+      <div class="detail-box fade-up" data-delay="100">
+        <h3 data-key="detailsWhereLabel">Where</h3>
+        <p data-key="detailsWhereValue">Home R · Any City</p>
+      </div>
+      <div class="detail-box fade-up" data-delay="200">
+        <h3 data-key="detailsDressLabel">Dress code</h3>
+        <p data-key="detailsDressValue">Elegant · Touch of Blue</p>
+      </div>
+    </div>
+
+    <div class="details-actions fade-up" data-delay="300">
+      <button id="locationBtn" class="btn primary" data-key="btnLocation">View Location</button>
+      <button id="whatsappBtn" class="btn" data-key="btnWhatsapp">WhatsApp</button>
+    </div>
+  </section>
+
+  <!-- سكشن 3: قصتنا -->
+  <section id="story" class="section story">
+    <div class="section-header fade-up">
+      <h2 data-key="storyTitle">Our Story</h2>
+      <p data-key="storyIntro">A small beginning that turned into a lifetime journey.</p>
+    </div>
+    <div class="story-content fade-up" data-delay="100">
+      <p data-key="storyBody1">
+        From simple conversations to shared dreams, every step brought us closer to this day.
+      </p>
+      <p data-key="storyBody2">
+        We cannot wait to celebrate this next chapter with the people we love the most.
+      </p>
+    </div>
+  </section>
+
+  <!-- سكشن 4: العد التنازلي -->
+  <section id="countdown" class="section countdown">
+    <div class="section-header fade-up">
+      <h2 data-key="countdownTitle">Countdown to the Day</h2>
+      <p data-key="countdownIntro">The celebration is almost here.</p>
+    </div>
+    <div class="countdown-timer fade-up" data-delay="100">
+      <div class="time-box">
+        <span id="days">00</span>
+        <small data-key="cdDays">Days</small>
+      </div>
+      <div class="time-box">
+        <span id="hours">00</span>
+        <small data-key="cdHours">Hours</small>
+      </div>
+      <div class="time-box">
+        <span id="minutes">00</span>
+        <small data-key="cdMinutes">Minutes</small>
+      </div>
+      <div class="time-box">
+        <span id="seconds">00</span>
+        <small data-key="cdSeconds">Seconds</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- سكشن 5: RSVP -->
+  <section id="rsvp" class="section rsvp">
+    <div class="section-header fade-up">
+      <h2 data-key="rsvpTitle">RSVP</h2>
+      <p data-key="rsvpIntro">Please let us know if you can make it.</p>
+    </div>
+
+    <form class="rsvp-form fade-up" data-delay="100" onsubmit="return false;">
+      <div class="field">
+        <label for="name" data-key="rsvpNameLabel">Your Name</label>
+        <input id="name" type="text" placeholder="" />
+      </div>
+      <div class="field">
+        <label for="guests" data-key="rsvpGuestsLabel">Number of Guests</label>
+        <input id="guests" type="number" min="1" value="1" />
+      </div>
+      <div class="field">
+        <label for="message" data-key="rsvpMessageLabel">Message</label>
+        <textarea id="message" rows="3"></textarea>
+      </div>
+      <button class="btn primary" data-key="btnRSVP">Send on WhatsApp</button>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <p data-key="footerText">Made with love for Mohamed &amp; Rawan.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
